@@ -15,3 +15,12 @@ Or you can join the FeiArt Diffusion Discord (https://discord.gg/5DzGHdSGcH)
 
 Share your work created with this model. Exchange experiences and parameters. And see more interesting custom models
 
+Copying the model file directly will not work if someone tries to run the notebook locally.
+
+there is one thing to note. I used classcond for this model at the time of training, but it actually ended up being used as an unconditional model. 
+So in addition to copying all the model settings, you also need to add this code to the run module.
+
+print('Prepping model...')
+model, diffusion = create_model_and_diffusion(**model_config)
+if diffusion_model == 'FeiArt_Handpainted_CG_Diffusion':
+    model.load_state_dict(torch.load(f'{model_path}/{get_model_filename(diffusion_model)}', map_location='cpu'),strict=False)
