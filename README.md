@@ -2,7 +2,7 @@
 FeiArt_Handpainted CG Diffusion
 
 FeiArt Handpainted CG Diffusion is a custom diffusion model trained by @FeiArt_AiArt.
-With my brand new diffusion model
+
 
 This is a huge 512*512 custom diffusion model, trained with A100.
 It can be used to create Handpainted CG style images. and it can also create stylized portraits.
